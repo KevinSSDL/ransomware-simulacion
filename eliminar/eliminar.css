@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #000;
+  color: #ff1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  overflow: hidden;
+}
+
+.blinking {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.container {
+  text-align: center;
+}
+
+svg {
+  width: 120px;
+  height: 120px;
+  fill: #ff1100;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 8px #ff1100);
+}
+
+.message {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 12px #ff1100;
+  user-select: none;
+}

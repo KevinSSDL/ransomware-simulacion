@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alerta de Ransomware - Simulación Educativa</title>
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="ransomware.css" />
+</head>
+<body>
+  <!-- Reproductor de audio en bucle -->
+  <audio id="alarmSound" src="../ransomware.mpga" autoplay loop></audio>
+
+  <div class="container" role="main" aria-label="Simulación educativa de alerta ransomware">
+    <h1>¡ATENCIÓN!</h1>
+    <p>Todos sus archivos han sido cifrados.</p>
+    <p>Para recuperar el acceso debe depositar:</p>
+    <div class="amount">$1000 USD</div>
+    <p>Si no se realiza el pago antes de que el siguiente contador llegue a cero, se eliminarán todos los archivos.</p>
+    <div class="countdown" id="countdown" aria-live="polite">00:10</div>
+
+    <!-- Formulario para ingresar clave o datos de tarjeta -->
+    <form id="payment-form" class="form-section">
+      <label for="codeInput">Ingrese clave o datos de tarjeta:</label>
+      <input type="text" id="codeInput" placeholder="**** **** **** 1234 o clave" required />
+      <button type="submit">Pagar</button>
+      <div id="feedback"></div>
+    </form>
+  </div>
+
+  <script src="ransomware.js"></script>
+</body>
+</html>
+
+
+

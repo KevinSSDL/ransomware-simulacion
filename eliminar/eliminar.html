@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datos Eliminados</title>
+  <link rel="stylesheet" href="eliminar.css" />
+</head>
+<body>
+  <!-- Reproductor de audio para la simulación de eliminación -->
+  <audio id="deleteSound" src="../eliminar.mpga" autoplay></audio>
+
+  <div class="container blinking" id="content">
+    <!-- Icono estilizado de esqueleto -->
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" aria-label="Icono de esqueleto">
+      <circle cx="32" cy="30" r="22" stroke="#ff1100" stroke-width="3" fill="none" />
+      <circle cx="22" cy="25" r="5" fill="#ff1100"/>
+      <circle cx="42" cy="25" r="5" fill="#ff1100"/>
+      <rect x="25" y="38" width="14" height="10" fill="#ff1100" rx="3" ry="3"/>
+      <line x1="20" y1="50" x2="44" y2="50" stroke="#ff1100" stroke-width="3" />
+    </svg>
+    <div class="message blinking">eliminado todos los datos</div>
+  </div>
+
+  <!-- Vinculación al archivo JavaScript -->
+  <script src="eliminar.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,160 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.interface-box {
+  width: 100%;  /* Cambiado para que ocupe el 100% del ancho */
+  height: 100%; /* Cambiado para que ocupe el 100% del alto */
+  max-width: 100vw; /* Asegura que no se sobrepase el ancho de la pantalla */
+  max-height: 100vh; /* Asegura que no se sobrepase el alto de la pantalla */
+  background: #1e1e1e;
+  border-radius: 16px;
+  box-shadow:
+    0 2px 14px rgba(0,0,0,0.95),
+    inset 0 0 12px #ff6f00;
+  padding: 32px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garantiza que tenga altura mínima de pantalla completa */
+  overflow: auto; /* Asegura que si el contenido es muy grande, se agregue scroll */
+}
+
+h1 {
+  margin: 0 0 12px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6f00;
+  user-select: none;
+}
+
+.info-text {
+  font-size: 15px;
+  color: #bbb;
+  margin-bottom: 28px;
+  font-style: italic;
+  user-select: none;
+}
+
+/* Ads container */
+.ads-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* Each ad block */
+.ad-item {
+  background: #2a2a2a;
+  border: 2px solid #ff6f00;
+  border-radius: 14px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.ad-item:hover, .ad-item:focus {
+  background-color: #3b3b3b;
+  outline: none;
+  transform: scale(1.02);
+}
+
+.ad-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffb347;
+  margin-bottom: 6px;
+}
+
+.ad-description {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.3;
+}
+
+/* Back link */
+.back-link {
+  margin-top: 22px;
+  align-self: flex-start;
+  color: #ff6f00;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  border: 1.5px solid #ff6f00;
+  padding: 8px 14px;
+  border-radius: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.back-link:hover, .back-link:focus {
+  background-color: #ff6f00;
+  color: #1e1e1e;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Scrollbar styling for ads */
+.ads-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ads-list::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.ads-list::-webkit-scrollbar-thumb {
+  background: #ff6f00;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .interface-box {
+    width: 100%; /* Asegura el ancho completo en pantallas pequeñas */
+    min-height: 400px;
+    padding: 24px 20px 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .ad-title {
+    font-size: 16px;
+  }
+
+  .ad-description {
+    font-size: 13px;
+  }
+
+  .back-link {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
