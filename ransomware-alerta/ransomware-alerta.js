@@ -19,11 +19,18 @@ function addSkeleton() {
 // Agregar esqueletos uno por uno cada 500ms
 const addInterval = setInterval(addSkeleton, 500);
 
-// Función para redirigir al presionar cualquier tecla
-const handleKeyPress = () => {
+// Función para redirigir
+const handleInteraction = () => {
   clearInterval(addInterval);
-  window.location.href = '../ransomware/ransomware.html';// Cambia esta URL según necesites
+  window.location.href = '../ransomware/ransomware.html'; // Cambia esta URL si es necesario
 };
 
-// Escuchar el evento de presionar cualquier tecla
-document.body.addEventListener('keydown', handleKeyPress);
+// Escuchar teclas (PC)
+document.body.addEventListener('keydown', handleInteraction);
+
+// Escuchar toques (móvil)
+document.body.addEventListener('touchstart', handleInteraction);
+
+// Escuchar clics (PC y algunos móviles)
+document.body.addEventListener('click', handleInteraction);
+
