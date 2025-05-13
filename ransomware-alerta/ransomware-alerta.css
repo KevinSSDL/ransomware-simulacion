@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  animation: pantallaParpadeo 0.2s infinite alternate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  user-select: none;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+}
+
+@keyframes pantallaParpadeo {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+#cifradoScreen {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.skeleton {
+  font-size: 60px;
+  color: #222;
+  filter: drop-shadow(0 0 8px red);
+  animation: parpadeoEsqueleto 1s infinite alternate;
+  user-select: none;
+}
+
+@keyframes parpadeoEsqueleto {
+  0% {
+    opacity: 0.2;
+    filter: drop-shadow(0 0 10px red);
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 25px red);
+  }
+}
+
+.message {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: red;
+  letter-spacing: 3px;
+  user-select: none;
+  text-shadow: 0 0 8px red;
+  text-align: center;
+}
+
+.instruction {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: yellow;
+  text-shadow: 0 0 8px yellow;
+  text-align: center;
+}
+
+/* ========================
+   === Responsive Styles ===
+   ======================== */
+@media (max-width: 640px) {
+  body {
+    padding: 5px 0;
+  }
+
+  .message {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+  }
+
+  .instruction {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+
+  #cifradoScreen {
+    width: 90%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .skeleton {
+    font-size: 40px;
+  }
+}
